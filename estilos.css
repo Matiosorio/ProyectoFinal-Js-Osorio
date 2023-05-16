@@ -14,42 +14,55 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
-  margin-bottom: 10px;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
 }
 
-.card .card-img-top {
-  width: 100%;
+.imgProductos {
+  width: 200px;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
+  margin-top: 1rem;
 }
 
 .card .card-title {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
 }
 
 .card .card-text {
   color: #888;
+  max-height: 80px; 
+  overflow: hidden;
 }
 
 .card button {
-  background-color: #f44336;
-  color: #fff;
+  background-color: black;
+  color: white;
   border: none;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 40px;
   cursor: pointer;
 }
 
 .card button:hover {
-  background-color: #d32f2f;
+  background-color: grey;
 }
 
 /* NAVBAR */
 #navbar {
   display: flex; 
   align-items: center; 
+}
+
+/* CONTAINER */
+.productos-container {
+  margin-top: 100px; 
+  margin-left: 20px; 
+  margin-right: 20px; 
+  background-color: #f2f2f2;
 }
 
 
@@ -67,34 +80,39 @@ body {
   background-color: white;
   padding: 10px;
   z-index: 9999;
-  width: 250px; 
+  width: 250px;
+  max-height: 300px; 
+  overflow-y: auto;
 }
 
 #contenedorCarrito.mostrar {
   display: block;
 }
 
-#contenedorCarrito .carrito-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 5px; 
+#contenedorCarrito h3 {
+  font-size: 16px; 
+  color: #333;
+  margin-bottom: 10px; 
 }
 
-#contenedorCarrito .carrito-items .imagenProductos {
-  width: 40px; 
-  height: 40px;
-  object-fit: cover;
+#contenedorCarrito .card {
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  padding: 5px; 
+  margin-bottom: 5px; 
+  background-color: #fff;
 }
 
-#contenedorCarrito .carrito-items .imagenProductos:hover {
-  width: 50px;
-  height: 50px;
+
+#contenedorCarrito .card button {
+  padding: 2px 5px; 
+  font-size: 15px; 
 }
+
 
 .btn {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* FOOTER */
@@ -112,12 +130,12 @@ body {
 }
 
 .footer p {
-  color: #777;
+  color: blue;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
-.social-icons a {
+.redes-sociales a {
   display: inline-block;
   margin-right: 10px;
   color: #777;

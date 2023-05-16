@@ -18,7 +18,7 @@ const liquidoParaPisos = new Producto(5, "Líquido para Pisos", 269.16, "img/liq
 const lysoform = new Producto(6, "Lysoform", 547.65, "img/lysoform.jpg");
 const cifBaño = new Producto(7, "Cif Baño", 235.17, "img/cif-baño.jpg");
 const aromatizante = new Producto(8, "Aromatizante", 404.99, "img/aromatizante.jpg");
-const bolsas = new Producto(9, "Bolsas de Consorcio", 430, "img/bolsas.jpg");
+const bolsas = new Producto(9, "Bolsas", 430, "img/bolsas.jpg");
 const esponja = new Producto(10, "Esponja", 115, "img/esponja.jpg");
 const guantes = new Producto(11, "Guantes", 662, "img/guantes.jpg");
 const rolloDeCocina = new Producto(12, "Rollo de Cocina", 519.41, "img/rollo-cocina.jpg");
@@ -51,7 +51,7 @@ const mostrarProductos = () => {
         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
         card.innerHTML = `
                     <div class="card">
-                    <img class="card-img-tom imgenProductos" src="${producto.img}" alt="${producto.nombre}">
+                    <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
                          <div class="card-body">
                             <h3>${producto.nombre}</h3>
                             <p>${producto.precio}</p>
@@ -98,7 +98,7 @@ const mostrarCarrito = () => {
         card.classList.add("card");
         card.innerHTML = `
                         <div class="card">
-                            <img class="card-img-tom imgenProductos" src="${producto.img}" alt="${producto.nombre}">
+                            <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
                             <div class="card-body">
                                 <h3>${producto.nombre}</h3>
                                 <p>${producto.precio}</p>
@@ -163,6 +163,7 @@ const restarDelCarrito = (id) => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarCarrito();
     calcularTotal();
+    actualizarContadorCarrito();
 };
 
 //Vaciar carrito
@@ -232,6 +233,6 @@ const navbar = document.querySelector('.navbar');
 
 //Clase expandido en el Navbar
 botonCarrito.addEventListener('click', () => {
-  contenedorCarrito.classList.toggle('mostrar');
-  navbar.classList.toggle('expandido'); 
+    contenedorCarrito.classList.toggle('mostrar');
+    navbar.classList.toggle('expandido');
 });
