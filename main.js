@@ -230,7 +230,8 @@ const botonCarrito = document.getElementById('verCarrito');
 
 const navbar = document.querySelector('.navbar');
 
+//Clase expandido en el Navbar
 botonCarrito.addEventListener('click', () => {
   contenedorCarrito.classList.toggle('mostrar');
-  navbar.classList.toggle('expandido'); // Agrega o remueve la clase "expandido" en el navbar
+  navbar.classList.toggle('expandido'); 
 });

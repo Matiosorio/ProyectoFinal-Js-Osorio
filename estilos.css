@@ -48,8 +48,8 @@ body {
 
 /* NAVBAR */
 #navbar {
-  display: flex; /* Crea una disposición en línea */
-  align-items: center; /* Centra verticalmente los elementos */
+  display: flex; 
+  align-items: center; 
 }
 
 
