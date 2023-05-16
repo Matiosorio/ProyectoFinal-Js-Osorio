@@ -226,11 +226,11 @@ calcularTotal();
 actualizarContadorCarrito();
 
 // Obtener elementos carrito por Id
-const carritoToggle = document.getElementById("verCarrito");
-const carritoContainer = document.getElementById("contenedorCarrito");
+const botonCarrito = document.getElementById('verCarrito');
 
-// Agrega un event listener al botón de alternar
-carritoToggle.addEventListener("click", () => {
-    carritoContainer.classList.toggle("oculto");
-    carritoToggle.classList.toggle("contraido");
+const navbar = document.querySelector('.navbar');
+
+botonCarrito.addEventListener('click', () => {
+  contenedorCarrito.classList.toggle('mostrar');
+  navbar.classList.toggle('expandido'); // Agrega o remueve la clase "expandido" en el navbar
 });

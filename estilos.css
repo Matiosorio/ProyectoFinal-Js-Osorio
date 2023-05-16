@@ -48,42 +48,48 @@ body {
 
 /* NAVBAR */
 #navbar {
-  position: relative;
+  display: flex; /* Crea una disposición en línea */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
 
 /* CARRITO */
 
+.carrito-container {
+  position: relative;
+}
+
 #contenedorCarrito {
+  display: none;
   position: absolute;
-  top: 100%; /* Posiciona el carrito justo debajo del navbar */
+  top: 100%;
   right: 0;
-  background-color: black;
+  background-color: white;
   padding: 10px;
-  border: 1px solid #ccc;
-  z-index: 9999; /* Asegura que el carrito se muestre por encima de otros elementos */
-  max-width: 200px; /* Reducimos aún más el ancho del carrito */
+  z-index: 9999;
+  width: 250px; 
 }
 
-#contenedorCarrito .card-img-top {
-  max-width: 60px; /* Reducimos el ancho de la imagen del producto en el carrito */
-  height: auto;
+#contenedorCarrito.mostrar {
+  display: block;
 }
 
-#contenedorCarrito .imagenProductos {
-  max-width: 40px; /* Reducimos el ancho de la imagen del producto en el carrito */
-  height: auto;
+#contenedorCarrito .carrito-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px; 
 }
 
-.card {
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
+#contenedorCarrito .carrito-items .imagenProductos {
+  width: 40px; 
+  height: 40px;
+  object-fit: cover;
 }
 
-.imagenProductos {
-  max-width: 60px; /* Reducimos el ancho de la imagen del producto en el contenedor de productos */
-  height: auto;
+#contenedorCarrito .carrito-items .imagenProductos:hover {
+  width: 50px;
+  height: 50px;
 }
 
 .btn {
@@ -117,3 +123,4 @@ body {
   color: #777;
   font-size: 20px;
   transition: color 0.3s
+}
