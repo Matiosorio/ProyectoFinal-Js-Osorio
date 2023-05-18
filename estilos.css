@@ -148,18 +148,18 @@ body {
     display: none;
     position: fixed;
     top: 0;
-    right: 0; /* Cambiado: abrir desde el lado derecho de la pantalla */
-    width: 400px; /* Cambiado: ancho fijo */
+    right: 0; 
+    width: 400px; 
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-    overflow-y: auto; /* Agregado: agregar barra de desplazamiento vertical si el contenido es demasiado largo */
+    overflow-y: auto; 
   }
   
   .modal-content {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Cambiado: máximo ancho del modal */
+    max-width: 100%; 
     margin: 100px auto;
     background-color: #fff;
     padding: 20px;
@@ -188,7 +188,7 @@ body {
   }
   
   .producto {
-    flex-basis: calc(50% - 10px); /* Cambiado: mostrar dos productos por fila */
+    flex-basis: calc(50% - 10px); 
     display: flex;
     flex-direction: column;
     align-items: center;

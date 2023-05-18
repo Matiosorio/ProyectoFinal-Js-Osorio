@@ -94,7 +94,7 @@ const agregarAlCarrito = (id) => {
 verCarrito.addEventListener("click", () => {
     const modal = document.getElementById("carritoModal");
     modal.style.display = "block";
-    mostrarCarrito(); // Cambio realizado: Llamar a la función mostrarCarrito en lugar de mostrarProductosCarrito
+    mostrarCarrito(); 
 });
 
 // Obtener elementos del modal por Id
@@ -119,7 +119,7 @@ window.addEventListener('click', (event) => {
 // Mostrar el carrito de compras
 const mostrarCarrito = () => {
     carritoModal.style.display = 'block';
-    contenedorProductosModal.innerHTML = ""; // Limpiar el contenido actual
+    contenedorProductosModal.innerHTML = ""; 
 
     carrito.forEach((producto) => {
         const productoElement = document.createElement("div");
@@ -200,7 +200,7 @@ const vaciarCarrito = () => {
     localStorage.removeItem("carrito");
     mostrarCarrito();
     actualizarContadorCarrito();
-    calcularTotal(); // Actualizar el total al vaciar el carrito
+    calcularTotal(); 
     actualizarContadorCarritoModal();
 };
 
@@ -214,7 +214,7 @@ const eliminarCarrito = () => {
     carrito = [];
     localStorage.clear();
     mostrarCarrito();
-    calcularTotal(); // Actualizar el total al eliminar el carrito
+    calcularTotal(); 
     actualizarContadorCarritoModal();
 };
 
@@ -231,7 +231,7 @@ const actualizarContadorCarrito = () => {
         }
     }
 
-    // Ocultar o mostrar el botón según el estado del carrito
+    // Se oculta o muestra el botón según el estado del carrito
     botonVaciarCarrito.style.display = carrito.length === 0 ? "none" : "block";
 };
 
