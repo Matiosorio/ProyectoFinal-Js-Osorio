@@ -2,71 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distrimax</title>
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!-- MI CSS -->
-    <link rel="stylesheet" href="estilos.css">
-    <!-- FONTAWESOME -->
-     <!-- LINK FONTAWESOME -->
-     <script src="https://kit.fontawesome.com/f8cc6a495e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distrimax</title>
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- MI CSS -->
+  <link rel="stylesheet" href="estilos.css">
+  <!-- FONTAWESOME -->
+  <!-- LINK FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/f8cc6a495e.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <!-- Navbar -->
+  
+  <header>
     <nav class="navbar">
-        <h1 class="navbarLogo">
-          <img src="img/logo-distrimax.png" alt="Logo de la tienda" class="logo">
-          Tienda Online
-        </h1>
-        <div class="carrito-container">
-          <button class="carrito-toggle" id="verCarrito">
-            <i class="fa fa-shopping-cart"></i>
-            Carrito
-            <span id="contadorCarrito">0</span>
-          </button>
-          <button class="carrito-toggle" id="vaciarCarrito">Vaciar Carrito</button>
-          <div id="contenedorCarrito" class="col oculto"></div>
-          <p>Total del carrito: <span id="totalCarrito"></span></p>
-        </div>
-      </nav>
+      <h1 class="navbarLogo">
+        <img src="img/logo-distrimax.png" alt="Logo de la tienda" class="logo">
+        Tienda Online
+      </h1>
+        <button id="verCarrito">Ver Carrito</button>
+    </nav>
+</header>
+  
 
 
-    <!-- SHOP -->
-    <div id="contenedorProductos" class="row productos-container"></div>
+  <!-- SHOP -->
+  <div id="contenedorProductos" class="row productos-container"></div>
 
-    <!-- Footer -->
-<footer class="footer">
-  <div class="container">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
       <div class="row">
-          <div class="col-md-6">
-              <h3>Contacto</h3>
-              <p>Email: distrimaxlimpieza@gmail.com</p>
-              <p>Teléfono: 4521-8005</p>
-              <p>Whatsapp: 11-3111-1298</p>
+        <div class="col-md-6">
+          <h3>Contacto</h3>
+          <p>Email: distrimaxlimpieza@gmail.com</p>
+          <p>Teléfono: 4521-8005</p>
+          <p>Whatsapp: 11-3111-1298</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Seguinos</h3>
+          <div class="redes-sociales">
+            <a href="https://www.facebook.com/distrimaxvillaurquiza" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/distrimaxlimpieza/?igshid=1njyyrohdoimc" target="_blank"><i
+                class="fab fa-instagram"></i></a>
           </div>
-          <div class="col-md-6">
-              <h3>Seguinos</h3>
-              <div class="redes-sociales">
-                  <a href="https://www.facebook.com/distrimaxvillaurquiza" target="_blank"><i class="fab fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/distrimaxlimpieza/?igshid=1njyyrohdoimc" target="_blank"><i class="fab fa-instagram"></i></a>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <!-- MAIN JS -->
-    <script src="main.js"></script>
+<!-- MODAL -->
+<div id="carritoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="contenedorProductosModal" class="row productos-container-carrito"></div> <!-- Nuevo contenedor para mostrar los productos en el modal -->
+      <div id="totalCarrito" class="total"></div>
+      <button id="vaciarCarrito" class="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+  </div>
+  
+
+  
+
+
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!-- MAIN JS -->
+  <script src="main.js"></script>
 </body>
 
 </html>

@@ -82,58 +82,85 @@ const agregarAlCarrito = (id) => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarContadorCarrito();
     calcularTotal();
-    /*mostrarCarrito();*/
+    actualizarContadorCarritoModal();
+   
+    const carritoModalAbierto = carritoModal.style.display === 'block';
+    if (carritoModalAbierto) {
+        mostrarCarrito();
+    }
 };
 
 // Evento para mostrar el carrito de compras
 verCarrito.addEventListener("click", () => {
-    mostrarCarrito();
+    const modal = document.getElementById("carritoModal");
+    modal.style.display = "block";
+    mostrarCarrito(); // Cambio realizado: Llamar a la función mostrarCarrito en lugar de mostrarProductosCarrito
+});
+
+// Obtener elementos del modal por Id
+const carritoModal = document.getElementById('carritoModal');
+const closeModalBtn = document.getElementsByClassName('close')[0];
+
+// Función para cerrar el modal
+const cerrarModal = () => {
+    carritoModal.style.display = 'none';
+};
+
+// Evento click en el botón "Cerrar"
+closeModalBtn.addEventListener('click', cerrarModal);
+
+// Evento click fuera del modal para cerrarlo
+window.addEventListener('click', (event) => {
+    if (event.target === carritoModal) {
+        cerrarModal();
+    }
 });
 
 // Mostrar el carrito de compras
 const mostrarCarrito = () => {
-    contenedorCarrito.innerHTML = "";
+    carritoModal.style.display = 'block';
+    contenedorProductosModal.innerHTML = ""; // Limpiar el contenido actual
+
     carrito.forEach((producto) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-                        <div class="card">
-                            <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
-                            <div class="card-body">
-                                <h3>${producto.nombre}</h3>
-                                <p>${producto.precio}</p>
-                                <p>${producto.cantidad}</p>
-                                <button class="btn colorBoton" id="botonEliminar${producto.id}">Eliminar</button>
-                                <button class="btn colorBoton" id="botonRestar${producto.id}">-</button>
-                            </div>
-                        </div>`;
+        const productoElement = document.createElement("div");
+        productoElement.classList.add("producto");
 
-        if (carrito.length === 0) {
-            const mensajeVacio = document.createElement("p");
-            mensajeVacio.textContent = "El carrito está vacío";
-            contenedorCarrito.appendChild(mensajeVacio);
-            return;
-        }
+        const imagenElement = document.createElement("img");
+        imagenElement.classList.add("producto-imagen");
+        imagenElement.src = producto.img;
+        imagenElement.alt = producto.nombre;
 
-        contenedorCarrito.appendChild(card);
+        const nombreElement = document.createElement("h3");
+        nombreElement.textContent = producto.nombre;
+        nombreElement.classList.add("producto-nombre");
 
+        const precioElement = document.createElement("p");
+        precioElement.textContent = `Precio: ${producto.precio}`;
+        precioElement.classList.add("producto-precio");
 
+        const cantidadElement = document.createElement("p");
+        cantidadElement.textContent = `Cantidad: ${producto.cantidad}`;
+        cantidadElement.classList.add("producto-cantidad");
 
-        // Agregar el evento click al botón "Eliminar"
-        const botonEliminar = card.querySelector(`#botonEliminar${producto.id}`);
-        botonEliminar.addEventListener("click", () => {
-            eliminarDelCarrito(producto.id);
-        });
+        const eliminarButton = document.createElement("button");
+        eliminarButton.textContent = "Eliminar";
+        eliminarButton.classList.add("btn", "colorBoton", "producto-btn-eliminar");
+        eliminarButton.addEventListener("click", () => eliminarDelCarrito(producto.id));
 
-        // Agregar el evento click al botón "Restar"
-        const botonRestar = card.querySelector(`#botonRestar${producto.id}`);
-        botonRestar.addEventListener("click", () => {
-            restarDelCarrito(producto.id);
-        });
+        const restarButton = document.createElement("button");
+        restarButton.textContent = "-";
+        restarButton.classList.add("btn", "colorBoton", "producto-btn-restar");
+        restarButton.addEventListener("click", () => restarDelCarrito(producto.id));
 
+        productoElement.appendChild(imagenElement);
+        productoElement.appendChild(nombreElement);
+        productoElement.appendChild(precioElement);
+        productoElement.appendChild(cantidadElement);
+        productoElement.appendChild(eliminarButton);
+        productoElement.appendChild(restarButton);
 
+        contenedorProductosModal.appendChild(productoElement);
     });
-
 
     calcularTotal();
 };
@@ -146,6 +173,7 @@ const eliminarDelCarrito = (id) => {
     mostrarCarrito();
     calcularTotal();
     actualizarContadorCarrito()
+    actualizarContadorCarritoModal();
 };
 
 // Restar productos del carrito
@@ -173,6 +201,7 @@ const vaciarCarrito = () => {
     mostrarCarrito();
     actualizarContadorCarrito();
     calcularTotal(); // Actualizar el total al vaciar el carrito
+    actualizarContadorCarritoModal();
 };
 
 //Evento click vaciar carrito
@@ -186,6 +215,7 @@ const eliminarCarrito = () => {
     localStorage.clear();
     mostrarCarrito();
     calcularTotal(); // Actualizar el total al eliminar el carrito
+    actualizarContadorCarritoModal();
 };
 
 //Actualizar contador carrito
@@ -203,6 +233,18 @@ const actualizarContadorCarrito = () => {
 
     // Ocultar o mostrar el botón según el estado del carrito
     botonVaciarCarrito.style.display = carrito.length === 0 ? "none" : "block";
+};
+
+const actualizarContadorCarritoModal = () => {
+    const contadorCarritoModal = document.getElementById("contadorCarritoModal");
+
+    if (contadorCarritoModal) {
+        if (carrito.length === 0) {
+            contadorCarritoModal.textContent = "0";
+        } else {
+            contadorCarritoModal.textContent = carrito.length.toString();
+        }
+    }
 };
 
 
@@ -226,13 +268,3 @@ calcularTotal();
 //Actualizar carrito
 actualizarContadorCarrito();
 
-// Obtener elementos carrito por Id
-const botonCarrito = document.getElementById('verCarrito');
-
-const navbar = document.querySelector('.navbar');
-
-//Clase expandido en el Navbar
-botonCarrito.addEventListener('click', () => {
-    contenedorCarrito.classList.toggle('mostrar');
-    navbar.classList.toggle('expandido');
-});

@@ -142,3 +142,117 @@ body {
   font-size: 20px;
   transition: color 0.3s
 }
+
+/* MODAL */
+#carritoModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0; /* Cambiado: abrir desde el lado derecho de la pantalla */
+    width: 400px; /* Cambiado: ancho fijo */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow-y: auto; /* Agregado: agregar barra de desplazamiento vertical si el contenido es demasiado largo */
+  }
+  
+  .modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Cambiado: máximo ancho del modal */
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+  }
+  
+  .productos-container-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .producto {
+    flex-basis: calc(50% - 10px); /* Cambiado: mostrar dos productos por fila */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .producto-imagen {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .producto-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .producto-precio {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .producto-cantidad {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #888;
+  }
+  
+  .producto-btn-eliminar,
+  .producto-btn-restar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .producto-btn-eliminar:hover,
+  .producto-btn-restar:hover {
+    background-color: #c82333;
+  }
+  
+  .total {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .vaciar-carrito {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .vaciar-carrito:hover {
+    background-color: #c82333;
+  }
+  
