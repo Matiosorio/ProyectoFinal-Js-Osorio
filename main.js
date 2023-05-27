@@ -1,4 +1,4 @@
-class Producto {
+/*class Producto {
     constructor(id, nombre, precio, img) {
         this.id = id;
         this.nombre = nombre;
@@ -29,7 +29,21 @@ const limpiaVidrios = new Producto(16, "Limpia Vidrios", 235.17, "img/limpia-vid
 
 //CREAMOS LOS DIFERENTES OBJETOS QUE FORMARÁN PARTE DE ESA CLASE
 
-const arrayProductos = [lavandina, papelHigienico, jabonEnPolvo, detergente, liquidoParaPisos, lysoform, cifBaño, aromatizante, bolsas, esponja, guantes, rolloDeCocina, suavizante, jabon, paniuelos, limpiaVidrios];
+const arrayProductos = [lavandina, papelHigienico, jabonEnPolvo, detergente, liquidoParaPisos, lysoform, cifBaño, aromatizante, bolsas, esponja, guantes, rolloDeCocina, suavizante, jabon, paniuelos, limpiaVidrios];*/
+
+const listadoProductos = "json/productos.json";
+let productos = [];
+
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        productos = datos;
+        console.log(datos);
+        mostrarProductos(productos);
+    })
+    .catch(error => console.log(error))
+
+
 
 // Creamos el array carrito donde se almacenarán las compras
 let carrito = [];
@@ -45,8 +59,8 @@ const contenedorCarrito = document.getElementById("contenedorCarrito");
 const verCarrito = document.getElementById("verCarrito");
 
 // Función para mostrar productos
-const mostrarProductos = () => {
-    arrayProductos.forEach((producto) => {
+const mostrarProductos = (productos) => {
+    productos.forEach((producto) => {
         const card = document.createElement("div");
         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
         card.innerHTML = `
@@ -76,7 +90,8 @@ const agregarAlCarrito = (id) => {
     if (productoAgregado) {
         productoAgregado.cantidad++;
     } else {
-        const producto = arrayProductos.find((producto) => producto.id === id);
+        const producto = productos.find((producto) => producto.id === id);
+        producto.cantidad = 1;
         carrito.push(producto);
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -262,7 +277,7 @@ const calcularTotal = () => {
 };
 
 // Llamar a la función mostrarProductos para mostrar los productos inicialmente
-mostrarProductos();
+mostrarProductos(productos);
 // Calcular total del carrito
 calcularTotal();
 //Actualizar carrito

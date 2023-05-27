@@ -1,0 +1,732 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alguicida",
+        "img": "./img/alguicida.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 1219
+    },
+    {
+        "id": 2,
+        "nombre": "Regulador Ph",
+        "img": "./img/regulador-ph.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 4829
+    },
+    {
+        "id": 3,
+        "nombre": "Pastillas de cloro",
+        "img": "./img/pastillas-cloro.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 4999
+    },
+    {
+        "id": 4,
+        "nombre": "Clarificador",
+        "img": "./img/clarificador.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 5859
+    },
+    {
+        "id": 5,
+        "nombre": "Boya",
+        "img": "./img/boya.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 999
+    },
+    {
+        "id": 6,
+        "nombre": "Cloro Granulado",
+        "img": "./img/cloro-granulado.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 3669
+    },
+    {
+        "id": 7,
+        "nombre": "Filtro Pearl",
+        "img": "./img/regulador-ph.jpg",
+        "categoria": {
+            "nombre": "Pileta",
+            "id": "pileta"
+        },
+        "precio": 17999
+    },
+    {
+        "id": 8,
+        "nombre": "Aromatizante Glade",
+        "img": "./img/aromatizante.jpg",
+        "categoria": {
+            "nombre": "Aromatizante",
+            "id": "limpieza"
+        },
+        "precio": 404.99
+    },
+    {
+        "id": 9,
+        "nombre": "Balde Vileda",
+        "img": "./img/balde-vileda.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 4921.63
+    },
+    {
+        "id": 10,
+        "nombre": "Bolsas Asurin 45x60",
+        "img": "./img/bolsas-45x60.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 430
+    },
+    {
+        "id": 11,
+        "nombre": "Bolsas Asurin 50x65",
+        "img": "./img/bolsas-50x65.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 2041.73
+    },
+    {
+        "id": 12,
+        "nombre": "Bolsas Asurin 80x105",
+        "img": "./img/bolsas-80x105.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 2298.78
+    },
+    {
+        "id": 13,
+        "nombre": "Cepillo La Gauchita",
+        "img": "./img/cepillo-la-gauchita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 947.26
+    },
+    {
+        "id": 14,
+        "nombre": "Ceramicol",
+        "img": "./img/ceramicol.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 620.63
+    },
+    {
+        "id": 15,
+        "nombre": "Cera Suiza",
+        "img": "./img/cera-suiza.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1229.37
+    },
+    {
+        "id": 16,
+        "nombre": "Cif Baño",
+        "img": "./img/cif-baño.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 235.17
+    },
+    {
+        "id": 17,
+        "nombre": "Detergente Cif",
+        "img": "./img/detergente-cif.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 334.52
+    },
+    {
+        "id": 18,
+        "nombre": "Detergente Magistral",
+        "img": "./img/detergente-magistral.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 778
+    },
+    {
+        "id": 19,
+        "nombre": "Escobilla La Gauchita",
+        "img": "./img/escobilla-la-gauchita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1648.05
+    },
+    {
+        "id": 20,
+        "nombre": "Escobillon La Gauchita",
+        "img": "./img/escobillon-la-gauchita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1459.40
+    },
+    {
+        "id": 21,
+        "nombre": "Esponja de acero Mortimer",
+        "img": "./img/esponja-acero.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 141.94
+    },
+    {
+        "id": 22,
+        "nombre": "Esponja Fibra Mortimer",
+        "img": "./img/esponja-fibra-mortimer.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 232.71
+    },
+    {
+        "id": 23,
+        "nombre": "Esponja Amarilla Mortimer",
+        "img": "./img/esponja-mortimer-amarilla.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 116
+    },
+    {
+        "id": 24,
+        "nombre": "Esponja Patito",
+        "img": "./img/esponja-patito.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 115
+    },
+    {
+        "id": 25,
+        "nombre": "Esponja Spunita",
+        "img": "./img/esponja-spunita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 265.11
+    },
+    {
+        "id": 26,
+        "nombre": "Franela Capullo",
+        "img": "./img/franela.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 525
+    },
+    {
+        "id": 27,
+        "nombre": "Guantes chicos Patito",
+        "img": "./img/guantes-chicos.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 662
+    },
+    {
+        "id": 28,
+        "nombre": "Guantes medianos Patito",
+        "img": "./img/guantes-medianos.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 661.79
+    },
+    {
+        "id": 29,
+        "nombre": "Guantes chicos Patito",
+        "img": "./img/guantes-chicos.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 682.97
+    },
+    {
+        "id": 30,
+        "nombre": "Jabon Veritas",
+        "img": "./img/guantes-chicos.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 473.68
+    },
+    {
+        "id": 31,
+        "nombre": "Jabón en polvo Ala 3Kg",
+        "img": "./img/jabon-en-polvo-ala.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1975.7
+    },
+    {
+        "id": 32,
+        "nombre": "Jabón en polvo Granby 800g",
+        "img": "./img/jabon-en-polvo-granby.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 485
+    },
+    {
+        "id": 33,
+        "nombre": "Jabón en polvo Skip 2.5 Kg",
+        "img": "./img/jabon-en-polvo-skip.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 2680
+    },
+    {
+        "id": 34,
+        "nombre": "Jabón en polvo Zorro 800g",
+        "img": "./img/jabon-en-polvo-zorro.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 480
+    },
+    {
+        "id": 35,
+        "nombre": "Jabón liquido Algabo",
+        "img": "./img/jabon-liquido-algabo.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 417.06
+    },
+    {
+        "id": 36,
+        "nombre": "Jabón de mano Veritas",
+        "img": "./img/jabon-veritas.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 473.68
+    },
+    {
+        "id": 37,
+        "nombre": "Lavandina Ayudin",
+        "img": "./img/lavandina-ayudin.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 220.8
+    },
+    {
+        "id": 38,
+        "nombre": "Lavandina Odex",
+        "img": "./img/lavandina-odex.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 180.24
+    },
+    {
+        "id": 39,
+        "nombre": "Lavandina Querubin",
+        "img": "./img/lavandina-querubin.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 235
+    },
+    {
+        "id": 40,
+        "nombre": "Limpiador Baño Cif",
+        "img": "./img/limpiador-baño-cif.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 415.57
+    },
+    {
+        "id": 41,
+        "nombre": "Limpiador Cremoso Cif",
+        "img": "./img/limpiador-cremoso-cif.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 538.16
+    },
+    {
+        "id": 42,
+        "nombre": "Limpiador Mr. Músculo",
+        "img": "./img/limpiador-mrmusculo.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 459.18
+    },
+    {
+        "id": 43,
+        "nombre": "Limpia Vidrios Cif",
+        "img": "./img/limpia-vidrios.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 235.17
+    },
+    {
+        "id": 44,
+        "nombre": "Liquido Pisos Glade",
+        "img": "./img/liquido-pisos-glade.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 319.78
+    },
+    {
+        "id": 45,
+        "nombre": "Liquido Pisos Poet",
+        "img": "./img/liquido-pisos-poet.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 309.05
+    },
+    {
+        "id": 46,
+        "nombre": "Liquido Pisos Procenex",
+        "img": "./img/liquido-pisos-procenex.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 269.16
+    },
+    {
+        "id": 47,
+        "nombre": "Lyqsoform",
+        "img": "./img/lysoform.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 547.65
+    },
+    {
+        "id": 48,
+        "nombre": "Mopa Vileda",
+        "img": "./img/mopa-vileda.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 3579.72
+    },
+    {
+        "id": 49,
+        "nombre": "Repelente Off",
+        "img": "./img/off.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 698.03
+    },
+    {
+        "id": 50,
+        "nombre": "Pala La Gauchita",
+        "img": "./img/pala.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 422.65
+    },
+    {
+        "id": 51,
+        "nombre": "Paños Multiuso Mortimer",
+        "img": "./img/paños-mortimer.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 465
+    },
+    {
+        "id": 52,
+        "nombre": "Pañuelos Elite",
+        "img": "./img/pañuelos.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 304.40
+    },
+    {
+        "id": 53,
+        "nombre": "Papel Higienico Campanita 100mt",
+        "img": "./img/papel-higienico-campanita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1588
+    },
+    {
+        "id": 54,
+        "nombre": "Papel Higienico Elite 80mt",
+        "img": "./img/papel-higienico-elite.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 792.22
+    },
+    {
+        "id": 55,
+        "nombre": "Papel Higienico Higienol 30mt",
+        "img": "./img/papel-higienico-higienol.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 828
+    },
+    {
+        "id": 56,
+        "nombre": "Plumero",
+        "img": "./img/plumero.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 6042
+    },
+    {
+        "id": 57,
+        "nombre": "Raid Mata Cucarachas",
+        "img": "./img/raid-cucarachas.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 908.48
+    },
+    {
+        "id": 58,
+        "nombre": "Raid Mata Hormigas",
+        "img": "./img/raid-hormigas.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 536.75
+    },
+    {
+        "id": 59,
+        "nombre": "Raid Mata Moscas",
+        "img": "./img/raid-moscas.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 514.69
+    },
+    {
+        "id": 60,
+        "nombre": "Raid Mata Pulgas",
+        "img": "./img/raid-pulgas.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1179.66
+    },
+    {
+        "id": 61,
+        "nombre": "Rejilla",
+        "img": "./img/rejilla.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 222.71
+    },
+    {
+        "id": 62,
+        "nombre": "Rejilla Auto",
+        "img": "./img/rejilla-auto.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 331.97
+    },
+    {
+        "id": 63,
+        "nombre": "Rollo de cocina Campanita",
+        "img": "./img/rollo-cocina-campanita.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 519.41
+    },
+    {
+        "id": 64,
+        "nombre": "Rollo de cocina Sussex",
+        "img": "./img/rollo-cocina-sussex.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 429.49
+    },
+    {
+        "id": 65,
+        "nombre": "Secador La Gauchita",
+        "img": "./img/secador.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1105.03
+    },
+    {
+        "id": 66,
+        "nombre": "Secador Azul",
+        "img": "./img/secador-azul.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1028.94
+    },
+    {
+        "id": 67,
+        "nombre": "Secador Negro",
+        "img": "./img/secador-negro.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1002.34
+    },
+    {
+        "id": 68,
+        "nombre": "Suavizante Downy",
+        "img": "./img/suavizante-downy.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1954.29
+    },
+    {
+        "id": 69,
+        "nombre": "Suavizante Vivere",
+        "img": "./img/suavizante-vivere.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1203.65
+    },
+    {
+        "id": 70,
+        "nombre": "Suavizante Zorro",
+        "img": "./img/suavizante-zorro.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 1214.28
+    },
+    {
+        "id": 71,
+        "nombre": "Trapo de piso Capullo",
+        "img": "./img/trapo-capullo.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 779.22
+    },
+    {
+        "id": 72,
+        "nombre": "Trapo de piso Gris",
+        "img": "./img/trapo-gris.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 521.84
+    },
+    {
+        "id": 73,
+        "nombre": "Woolite Bebe",
+        "img": "./img/woolite-bebe.jpg",
+        "categoria": {
+            "nombre": "Limpieza",
+            "id": "limpieza"
+        },
+        "precio": 471.44
+    }
+]
