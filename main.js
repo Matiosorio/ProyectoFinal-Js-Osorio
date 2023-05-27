@@ -57,6 +57,8 @@ if (localStorage.getItem("carrito")) {
 const contenedorProductos = document.getElementById("contenedorProductos");
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 const verCarrito = document.getElementById("verCarrito");
+const resultado = document.getElementById("resultado");
+const buscador = document.getElementById("buscador");
 
 // Función para mostrar productos
 const mostrarProductos = (productos) => {
@@ -275,6 +277,43 @@ const calcularTotal = () => {
     const totalCarrito = document.getElementById("totalCarrito");
     totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
 };
+
+//Buscador de articulos
+const filtrar = () => {
+    resultado.innerHTML = '';
+  
+    const texto = buscador.value.toLowerCase();
+    if (texto === '') {
+      // No se ha ingresado ningún texto en el buscador, no se muestra ningún producto
+      return;
+    }
+  
+    for (let producto of productos) {
+      let nombre = producto.nombre.toLowerCase();
+  
+      if (nombre.indexOf(texto) !== -1) {
+        const card = document.createElement("div");
+        card.classList.add("card", "resultado-card");
+        card.innerHTML = `
+          <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
+          <div class="card-body">
+            <h3>${producto.nombre}</h3>
+            <p>${producto.precio}</p>
+            <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
+          </div>`;
+  
+        resultado.appendChild(card);
+      }
+    }
+  
+    if (resultado.innerHTML === '') {
+      resultado.innerHTML = `<li>Producto no encontrado</li>`;
+    }
+  };
+
+buscador.addEventListener('keyup', filtrar)
+filtrar();
+
 
 // Llamar a la función mostrarProductos para mostrar los productos inicialmente
 mostrarProductos(productos);

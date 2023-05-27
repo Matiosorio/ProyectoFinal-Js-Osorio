@@ -18,21 +18,24 @@
 </head>
 
 <body>
-  
+
   <header>
     <nav class="navbar">
       <h1 class="navbarLogo">
         <img src="img/logo-distrimax.png" alt="Logo de la tienda" class="logo">
         Tienda Online
       </h1>
-        <button id="verCarrito">Ver Carrito</button>
+      <button id="verCarrito">Ver Carrito</button>
     </nav>
-</header>
-  
+    <input type="text" id="buscador" class="form-control my-2" placeholder="¿Qué querés comprar hoy?">
+    <div id="resultado" class="resultado-container"></div>
+  </header>
+
 
 
   <!-- SHOP -->
   <div id="contenedorProductos" class="row productos-container"></div>
+  
 
   <!-- Footer -->
   <footer class="footer">
@@ -56,18 +59,18 @@
     </div>
   </footer>
 
-<!-- MODAL -->
-<div id="carritoModal" class="modal">
+  <!-- MODAL -->
+  <div id="carritoModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <div id="contenedorProductosModal" class="row productos-container-carrito"></div> 
+      <div id="contenedorProductosModal" class="row productos-container-carrito"></div>
       <div id="totalCarrito" class="total"></div>
       <button id="vaciarCarrito" class="vaciar-carrito">Vaciar Carrito</button>
     </div>
   </div>
-  
 
-  
+
+
 
 
   <!-- BOOTSTRAP -->

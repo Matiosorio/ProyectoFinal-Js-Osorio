@@ -115,6 +115,19 @@ body {
   font-size: 15px;
 }
 
+/*BUSCADOR */
+.resultado-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resultado-card {
+  width: 18rem;
+  margin: 10px;
+}
+
+
 /* FOOTER */
 
 .footer {
