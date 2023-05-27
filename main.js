@@ -1,35 +1,4 @@
-/*class Producto {
-    constructor(id, nombre, precio, img) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.img = img;
-        this.cantidad = 1;
-    }
-}
 
-//Creo los distintos objetos 
-
-const lavandina = new Producto(1, "Lavandina", 220.80, "img/lavandina.jpg");
-const papelHigienico = new Producto(2, "Papel Higiénico", 828, "img/papel-higienico.jpg");
-const jabonEnPolvo = new Producto(3, "Jabón en Polvo", 2680, "img/jabon-en-polvo.jpg");
-const detergente = new Producto(4, "Detergente", 778, "img/detergente.jpg");
-const liquidoParaPisos = new Producto(5, "Líquido para Pisos", 269.16, "img/liquido-para-pisos.jpg");
-const lysoform = new Producto(6, "Lysoform", 547.65, "img/lysoform.jpg");
-const cifBaño = new Producto(7, "Cif Baño", 235.17, "img/cif-baño.jpg");
-const aromatizante = new Producto(8, "Aromatizante", 404.99, "img/aromatizante.jpg");
-const bolsas = new Producto(9, "Bolsas", 430, "img/bolsas.jpg");
-const esponja = new Producto(10, "Esponja", 115, "img/esponja.jpg");
-const guantes = new Producto(11, "Guantes", 662, "img/guantes.jpg");
-const rolloDeCocina = new Producto(12, "Rollo de Cocina", 519.41, "img/rollo-cocina.jpg");
-const suavizante = new Producto(13, "Suavizante", 1203.65, "img/suavizante.jpg");
-const jabon = new Producto(14, "Jabón", 473.68, "img/jabon.jpg");
-const paniuelos = new Producto(15, "Pañuelos", 304.40, "img/pañuelos.jpg");
-const limpiaVidrios = new Producto(16, "Limpia Vidrios", 235.17, "img/limpia-vidrios.jpg");
-
-//CREAMOS LOS DIFERENTES OBJETOS QUE FORMARÁN PARTE DE ESA CLASE
-
-const arrayProductos = [lavandina, papelHigienico, jabonEnPolvo, detergente, liquidoParaPisos, lysoform, cifBaño, aromatizante, bolsas, esponja, guantes, rolloDeCocina, suavizante, jabon, paniuelos, limpiaVidrios];*/
 
 const listadoProductos = "json/productos.json";
 let productos = [];
@@ -68,9 +37,9 @@ const mostrarProductos = (productos) => {
         card.innerHTML = `
                     <div class="card">
                     <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
-                         <div class="card-body">
-                            <h3>${producto.nombre}</h3>
-                            <p>${producto.precio}</p>
+                         <div class="card-productos">
+                            <h3 class="card-title">${producto.nombre}</h3>
+                            <p class="card-text">$${producto.precio}</p>
                             <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
                         </div>
                  </div>`;
@@ -84,6 +53,7 @@ const mostrarProductos = (productos) => {
         });
     });
 };
+
 
 // Agregar productos al carrito
 const agregarAlCarrito = (id) => {
@@ -100,18 +70,20 @@ const agregarAlCarrito = (id) => {
     actualizarContadorCarrito();
     calcularTotal();
     actualizarContadorCarritoModal();
-   
+    actualizarContadorCarritoModal(); // Llamada adicional para actualizar el contador en el modal
+
     const carritoModalAbierto = carritoModal.style.display === 'block';
     if (carritoModalAbierto) {
         mostrarCarrito();
     }
 };
 
+
 // Evento para mostrar el carrito de compras
 verCarrito.addEventListener("click", () => {
     const modal = document.getElementById("carritoModal");
     modal.style.display = "block";
-    mostrarCarrito(); 
+    mostrarCarrito();
 });
 
 // Obtener elementos del modal por Id
@@ -136,51 +108,60 @@ window.addEventListener('click', (event) => {
 // Mostrar el carrito de compras
 const mostrarCarrito = () => {
     carritoModal.style.display = 'block';
-    contenedorProductosModal.innerHTML = ""; 
-
-    carrito.forEach((producto) => {
+    contenedorProductosModal.innerHTML = "";
+  
+    if (carrito.length === 0) {
+      const carritoVacio = document.getElementById('carritoVacio');
+      carritoVacio.style.display = 'block';
+    } else {
+      const carritoVacio = document.getElementById('carritoVacio');
+      carritoVacio.style.display = 'none';
+  
+      carrito.forEach((producto) => {
         const productoElement = document.createElement("div");
         productoElement.classList.add("producto");
-
+  
         const imagenElement = document.createElement("img");
         imagenElement.classList.add("producto-imagen");
         imagenElement.src = producto.img;
         imagenElement.alt = producto.nombre;
-
+  
         const nombreElement = document.createElement("h3");
         nombreElement.textContent = producto.nombre;
         nombreElement.classList.add("producto-nombre");
-
+  
         const precioElement = document.createElement("p");
         precioElement.textContent = `Precio: ${producto.precio}`;
         precioElement.classList.add("producto-precio");
-
+  
         const cantidadElement = document.createElement("p");
         cantidadElement.textContent = `Cantidad: ${producto.cantidad}`;
         cantidadElement.classList.add("producto-cantidad");
-
+  
         const eliminarButton = document.createElement("button");
         eliminarButton.textContent = "Eliminar";
         eliminarButton.classList.add("btn", "colorBoton", "producto-btn-eliminar");
         eliminarButton.addEventListener("click", () => eliminarDelCarrito(producto.id));
-
+  
         const restarButton = document.createElement("button");
         restarButton.textContent = "-";
         restarButton.classList.add("btn", "colorBoton", "producto-btn-restar");
         restarButton.addEventListener("click", () => restarDelCarrito(producto.id));
-
+  
         productoElement.appendChild(imagenElement);
         productoElement.appendChild(nombreElement);
         productoElement.appendChild(precioElement);
         productoElement.appendChild(cantidadElement);
         productoElement.appendChild(eliminarButton);
         productoElement.appendChild(restarButton);
-
+  
         contenedorProductosModal.appendChild(productoElement);
-    });
-
-    calcularTotal();
-};
+      });
+  
+      calcularTotal();
+    }
+  };
+  
 
 
 // Eliminar productos del carrito
@@ -217,7 +198,7 @@ const vaciarCarrito = () => {
     localStorage.removeItem("carrito");
     mostrarCarrito();
     actualizarContadorCarrito();
-    calcularTotal(); 
+    calcularTotal();
     actualizarContadorCarritoModal();
 };
 
@@ -231,11 +212,12 @@ const eliminarCarrito = () => {
     carrito = [];
     localStorage.clear();
     mostrarCarrito();
-    calcularTotal(); 
+    calcularTotal();
     actualizarContadorCarritoModal();
 };
 
-//Actualizar contador carrito
+
+// Actualizar contador del carrito en el botón "Ver Carrito"
 const actualizarContadorCarrito = () => {
     const contadorCarrito = document.getElementById("contadorCarrito");
     const botonVaciarCarrito = document.getElementById("vaciarCarrito");
@@ -244,7 +226,9 @@ const actualizarContadorCarrito = () => {
         if (carrito.length === 0) {
             contadorCarrito.textContent = "0";
         } else {
-            contadorCarrito.textContent = carrito.length.toString();
+            // Calcular la cantidad total de productos en el carrito sumando las cantidades individuales
+            const cantidadTotal = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+            contadorCarrito.textContent = cantidadTotal.toString();
         }
     }
 
@@ -252,6 +236,7 @@ const actualizarContadorCarrito = () => {
     botonVaciarCarrito.style.display = carrito.length === 0 ? "none" : "block";
 };
 
+// Actualizar contador del carrito en el modal
 const actualizarContadorCarritoModal = () => {
     const contadorCarritoModal = document.getElementById("contadorCarritoModal");
 
@@ -259,12 +244,12 @@ const actualizarContadorCarritoModal = () => {
         if (carrito.length === 0) {
             contadorCarritoModal.textContent = "0";
         } else {
-            contadorCarritoModal.textContent = carrito.length.toString();
+            // Calcular la cantidad total de productos en el carrito sumando las cantidades individuales
+            const cantidadTotal = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+            contadorCarritoModal.textContent = cantidadTotal.toString();
         }
     }
 };
-
-
 
 // Calcular el total del carrito
 const calcularTotal = () => {
@@ -278,38 +263,46 @@ const calcularTotal = () => {
     totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
 };
 
+
+
 //Buscador de articulos
 const filtrar = () => {
     resultado.innerHTML = '';
-  
+
     const texto = buscador.value.toLowerCase();
     if (texto === '') {
-      // No se ha ingresado ningún texto en el buscador, no se muestra ningún producto
-      return;
+        // No se ha ingresado ningún texto en el buscador, no se muestra ningún producto
+        return;
     }
-  
+
     for (let producto of productos) {
-      let nombre = producto.nombre.toLowerCase();
-  
-      if (nombre.indexOf(texto) !== -1) {
-        const card = document.createElement("div");
-        card.classList.add("card", "resultado-card");
-        card.innerHTML = `
+        let nombre = producto.nombre.toLowerCase();
+
+        if (nombre.indexOf(texto) !== -1) {
+            const card = document.createElement("div");
+            card.classList.add("card", "resultado-card");
+            card.innerHTML = `
           <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
           <div class="card-body">
             <h3>${producto.nombre}</h3>
             <p>${producto.precio}</p>
             <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
           </div>`;
-  
-        resultado.appendChild(card);
-      }
+
+            resultado.appendChild(card);
+
+            // Agregar el evento click al botón "Agregar al Carrito" del producto filtrado
+            const botonAgregar = card.querySelector(`#boton${producto.id}`);
+            botonAgregar.addEventListener("click", () => {
+                agregarAlCarrito(producto.id);
+            });
+        }
     }
-  
+
     if (resultado.innerHTML === '') {
-      resultado.innerHTML = `<li>Producto no encontrado</li>`;
+        resultado.innerHTML = `<li>Producto no encontrado</li>`;
     }
-  };
+};
 
 buscador.addEventListener('keyup', filtrar)
 filtrar();

@@ -19,23 +19,47 @@
 
 <body>
 
-  <header>
-    <nav class="navbar">
-      <h1 class="navbarLogo">
-        <img src="img/logo-distrimax.png" alt="Logo de la tienda" class="logo">
-        Tienda Online
-      </h1>
-      <button id="verCarrito">Ver Carrito</button>
-    </nav>
-    <input type="text" id="buscador" class="form-control my-2" placeholder="¿Qué querés comprar hoy?">
-    <div id="resultado" class="resultado-container"></div>
-  </header>
+
+  <!-- <header> -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img class="fluid logo" src="./img/logo-distrimax.png"
+          alt="Logo Distrimax"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>
+              Todos los productos</button>
+          </li>
+          <li class="nav-item">
+            <button id="limpieza" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>
+              Limpieza</button>
+          </li>
+          <li class="nav-item">
+            <button id="pileta" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i>
+              Pileta</button>
+          </li>
+        </ul>
+      </div>
+      <button id="verCarrito">
+        <i class="fa-solid fa-cart-shopping"></i> Carrito
+        <span id="contadorCarrito" class="contador-carrito">0</span>
+      </button>
+    </div>
+  </nav>
+  <input type="text" id="buscador" class="form-control my-2" placeholder="¿Qué querés comprar hoy?">
+  <div id="resultado" class="resultado-container"></div>
+  <!-- </header> -->
 
 
 
   <!-- SHOP -->
   <div id="contenedorProductos" class="row productos-container"></div>
-  
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -64,6 +88,7 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <div id="contenedorProductosModal" class="row productos-container-carrito"></div>
+      <p id="carritoVacio" class="carrito-vacio">Tu carrito está vacío.</p>
       <div id="totalCarrito" class="total"></div>
       <button id="vaciarCarrito" class="vaciar-carrito">Vaciar Carrito</button>
     </div>
