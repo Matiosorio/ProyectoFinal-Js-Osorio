@@ -363,6 +363,66 @@ const filtrar = () => {
 buscador.addEventListener('keyup', filtrar)
 filtrar();
 
+// Evento click en el botón de categoría "Limpieza"
+const botonLimpieza = document.getElementById("botonLimpieza");
+botonLimpieza.addEventListener("click", () => {
+    filtrarPorCategoria("limpieza");
+});
+
+// Evento click en el botón de categoría "Pileta"
+const botonPileta = document.getElementById("botonPileta");
+botonPileta.addEventListener("click", () => {
+    filtrarPorCategoria("pileta");
+});
+
+// Evento click en el botón de categoría "Accesorios de limpieza"
+const botonAccesorios = document.getElementById("botonAccesorios");
+botonAccesorios.addEventListener("click", () => {
+    filtrarPorCategoria("accesorios");
+});
+
+// Evento click en el botón de categoría "Papeles"
+const botonPapeles = document.getElementById("botonPapeles");
+botonPapeles.addEventListener("click", () => {
+    filtrarPorCategoria("papeles");
+});
+
+// Evento click en el botón de categoría "Insecticidas"
+const botonInsecticidas = document.getElementById("botonInsecticidas");
+botonInsecticidas.addEventListener("click", () => {
+    filtrarPorCategoria("insecticidas");
+});
+
+// Evento click en el botón de categoría "Lavado"
+const botonLavado = document.getElementById("botonLavado");
+botonLavado.addEventListener("click", () => {
+    filtrarPorCategoria("lavado");
+});
+
+const filtrarPorCategoria = (categoria) => {
+    // Limpiamos el contenedor de productos antes de mostrar los nuevos productos
+    contenedorProductos.innerHTML = "";
+
+    // Filtramos los productos por la categoría seleccionada
+    const productosFiltrados = productos.filter(producto => producto.categoria.id === categoria);
+
+    // Mostramos los productos filtrados en el contenedor de productos
+    mostrarProductos(productosFiltrados);
+};
+
+// Función para mostrar todos los productos
+const mostrarTodosLosProductos = () => {
+    contenedorProductos.innerHTML = ""; // Limpiar el contenedor de productos
+  
+    // Mostrar todos los productos en el contenedor
+    mostrarProductos(productos);
+  };
+  
+  // Evento click en el botón de categoría "Todos"
+  const botonTodos = document.getElementById("botonTodos");
+  botonTodos.addEventListener("click", () => {
+    mostrarTodosLosProductos();
+  });
 
 // Llamar a la función mostrarProductos para mostrar los productos inicialmente
 mostrarProductos(productos);
