@@ -1,5 +1,4 @@
 
-
 const listadoProductos = "json/productos.json";
 let productos = [];
 
@@ -42,7 +41,7 @@ const mostrarProductos = (productos) => {
                             <p class="card-text">$${producto.precio}</p>
                             <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
                         </div>
-                 </div>`;
+                    </div>`;
 
         contenedorProductos.appendChild(card);
 
@@ -76,6 +75,19 @@ const agregarAlCarrito = (id) => {
     if (carritoModalAbierto) {
         mostrarCarrito();
     }
+
+    Toastify({
+        text: "Producto agregado al carrito",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        style: {
+            background: "linear-gradient(to right, #180c78, #007fff)",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: "15px"
+        },
+        }).showToast()
 };
 
 
@@ -172,6 +184,19 @@ const eliminarDelCarrito = (id) => {
     calcularTotal();
     actualizarContadorCarrito()
     actualizarContadorCarritoModal();
+
+    Toastify({
+        text: "¡Listo! Eliminaste el producto",
+        duration: 3000,
+        gravity: "bottom",
+        position: "center",
+        style: {
+            background: "linear-gradient(to right, #180c78, #007fff)",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: "15px"
+        },
+        }).showToast()
 };
 
 // Restar productos del carrito
@@ -193,14 +218,46 @@ const restarDelCarrito = (id) => {
 };
 
 //Vaciar carrito
-const vaciarCarrito = () => {
-    carrito = [];
-    localStorage.removeItem("carrito");
-    mostrarCarrito();
-    actualizarContadorCarrito();
-    calcularTotal();
-    actualizarContadorCarritoModal();
-};
+const vaciarCarrito = async () => {
+    const confirmacion = await Swal.fire({
+      title: '¿Estás seguro de vaciar el carrito?',
+      text: "Esta acción no se puede deshacer",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, vaciar carrito',
+      cancelButtonText: 'Cancelar',
+      backdrop: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      customClass: {
+        container: 'my-swal-container',
+        popup: 'my-swal-popup',
+      },
+    });
+  
+    if (confirmacion.isConfirmed) {
+      // Vaciar el carrito y eliminar del LocalStorage
+      carrito = [];
+      localStorage.removeItem("carrito");
+      mostrarCarrito();
+      actualizarContadorCarrito();
+      calcularTotal();
+      actualizarContadorCarritoModal();
+  
+      setTimeout(() => {
+        Swal.fire(
+          'Carrito vaciado',
+          'El carrito ha sido vaciado correctamente.',
+          'success'
+        );
+      }, 300); // Ajusta el tiempo según sea necesario
+    }
+  };
+  
+  
+  
 
 //Evento click vaciar carrito
 const botonVaciarCarrito = document.getElementById("vaciarCarrito");
@@ -282,12 +339,14 @@ const filtrar = () => {
             const card = document.createElement("div");
             card.classList.add("card", "resultado-card");
             card.innerHTML = `
-          <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
-          <div class="card-body">
-            <h3>${producto.nombre}</h3>
-            <p>${producto.precio}</p>
-            <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
-          </div>`;
+            <div class="card">
+            <img class="card-img-tom imgProductos" src="${producto.img}" alt="${producto.nombre}">
+                 <div class="card-productos">
+                    <h3 class="card-title">${producto.nombre}</h3>
+                    <p class="card-text">$${producto.precio}</p>
+                    <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
+                </div>
+         </div>`;
 
             resultado.appendChild(card);
 
@@ -314,4 +373,3 @@ mostrarProductos(productos);
 calcularTotal();
 //Actualizar carrito
 actualizarContadorCarrito();
-
