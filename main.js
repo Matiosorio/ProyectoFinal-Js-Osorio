@@ -246,16 +246,13 @@ const vaciarCarrito = async () => {
       calcularTotal();
       actualizarContadorCarritoModal();
   
-      setTimeout(() => {
-        Swal.fire(
-          'Carrito vaciado',
-          'El carrito ha sido vaciado correctamente.',
-          'success'
-        );
-      }, 300); // Ajusta el tiempo según sea necesario
+      Swal.fire(
+        'Carrito vaciado',
+        'El carrito ha sido vaciado correctamente.',
+        'success'
+      );
     }
   };
-  
   
   
 
