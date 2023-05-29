@@ -281,8 +281,8 @@
     },
     {
         "id": 29,
-        "nombre": "Guantes chicos Patito",
-        "img": "./img/guantes-chicos.jpg",
+        "nombre": "Guantes grandes Patito",
+        "img": "./img/guantes-grandes.jpg",
         "categoria": {
             "nombre": "Accesorios",
             "id": "accesorios"
@@ -291,16 +291,6 @@
     },
     {
         "id": 30,
-        "nombre": "Jabon Veritas",
-        "img": "./img/guantes-chicos.jpg",
-        "categoria": {
-            "nombre": "Limpieza",
-            "id": "limpieza"
-        },
-        "precio": 473.68
-    },
-    {
-        "id": 31,
         "nombre": "Jabón en polvo Ala 3Kg",
         "img": "./img/jabon-en-polvo-ala.jpg",
         "categoria": {
@@ -310,7 +300,7 @@
         "precio": 1975.7
     },
     {
-        "id": 32,
+        "id": 31,
         "nombre": "Jabón en polvo Granby 800g",
         "img": "./img/jabon-en-polvo-granby.jpg",
         "categoria": {
@@ -320,7 +310,7 @@
         "precio": 485
     },
     {
-        "id": 33,
+        "id": 32,
         "nombre": "Jabón en polvo Skip 2.5 Kg",
         "img": "./img/jabon-en-polvo-skip.jpg",
         "categoria": {
@@ -330,7 +320,7 @@
         "precio": 2680
     },
     {
-        "id": 34,
+        "id": 33,
         "nombre": "Jabón en polvo Zorro 800g",
         "img": "./img/jabon-en-polvo-zorro.jpg",
         "categoria": {
@@ -340,7 +330,7 @@
         "precio": 480
     },
     {
-        "id": 35,
+        "id": 34,
         "nombre": "Jabón liquido Algabo",
         "img": "./img/jabon-liquido-algabo.jpg",
         "categoria": {
@@ -350,7 +340,7 @@
         "precio": 417.06
     },
     {
-        "id": 36,
+        "id": 35,
         "nombre": "Jabón de mano Veritas",
         "img": "./img/jabon-veritas.jpg",
         "categoria": {
@@ -360,7 +350,7 @@
         "precio": 473.68
     },
     {
-        "id": 37,
+        "id": 36,
         "nombre": "Lavandina Ayudin",
         "img": "./img/lavandina-ayudin.jpg",
         "categoria": {
@@ -370,7 +360,7 @@
         "precio": 220.8
     },
     {
-        "id": 38,
+        "id": 37,
         "nombre": "Lavandina Odex",
         "img": "./img/lavandina-odex.jpg",
         "categoria": {
@@ -380,7 +370,7 @@
         "precio": 180.24
     },
     {
-        "id": 39,
+        "id": 38,
         "nombre": "Lavandina Querubin",
         "img": "./img/lavandina-querubin.jpg",
         "categoria": {
@@ -390,7 +380,7 @@
         "precio": 235
     },
     {
-        "id": 40,
+        "id": 39,
         "nombre": "Limpiador Baño Cif",
         "img": "./img/limpiador-baño-cif.jpg",
         "categoria": {
@@ -400,7 +390,7 @@
         "precio": 415.57
     },
     {
-        "id": 41,
+        "id": 40,
         "nombre": "Limpiador Cremoso Cif",
         "img": "./img/limpiador-cremoso-cif.jpg",
         "categoria": {
@@ -410,7 +400,7 @@
         "precio": 538.16
     },
     {
-        "id": 42,
+        "id": 41,
         "nombre": "Limpiador Mr. Músculo",
         "img": "./img/limpiador-mrmusculo.jpg",
         "categoria": {
@@ -420,7 +410,7 @@
         "precio": 459.18
     },
     {
-        "id": 43,
+        "id": 42,
         "nombre": "Limpia Vidrios Cif",
         "img": "./img/limpia-vidrios.jpg",
         "categoria": {
@@ -430,7 +420,7 @@
         "precio": 235.17
     },
     {
-        "id": 44,
+        "id": 43,
         "nombre": "Liquido Pisos Glade",
         "img": "./img/liquido-pisos-glade.jpg",
         "categoria": {
@@ -440,7 +430,7 @@
         "precio": 319.78
     },
     {
-        "id": 45,
+        "id": 44,
         "nombre": "Liquido Pisos Poet",
         "img": "./img/liquido-pisos-poet.jpg",
         "categoria": {
@@ -450,7 +440,7 @@
         "precio": 309.05
     },
     {
-        "id": 46,
+        "id": 45,
         "nombre": "Liquido Pisos Procenex",
         "img": "./img/liquido-pisos-procenex.jpg",
         "categoria": {
@@ -460,7 +450,7 @@
         "precio": 269.16
     },
     {
-        "id": 47,
+        "id": 46,
         "nombre": "Lyqsoform",
         "img": "./img/lysoform.jpg",
         "categoria": {
@@ -470,7 +460,7 @@
         "precio": 547.65
     },
     {
-        "id": 48,
+        "id": 47,
         "nombre": "Mopa Vileda",
         "img": "./img/mopa-vileda.jpg",
         "categoria": {
@@ -480,7 +470,7 @@
         "precio": 3579.72
     },
     {
-        "id": 49,
+        "id": 48,
         "nombre": "Repelente Off",
         "img": "./img/off.jpg",
         "categoria": {
@@ -490,7 +480,7 @@
         "precio": 698.03
     },
     {
-        "id": 50,
+        "id": 49,
         "nombre": "Pala La Gauchita",
         "img": "./img/pala.jpg",
         "categoria": {
@@ -500,7 +490,7 @@
         "precio": 422.65
     },
     {
-        "id": 51,
+        "id": 50,
         "nombre": "Paños Multiuso Mortimer",
         "img": "./img/paños-mortimer.jpg",
         "categoria": {
@@ -510,7 +500,7 @@
         "precio": 465
     },
     {
-        "id": 52,
+        "id": 51,
         "nombre": "Pañuelos Elite",
         "img": "./img/pañuelos.jpg",
         "categoria": {
@@ -520,7 +510,7 @@
         "precio": 304.40
     },
     {
-        "id": 53,
+        "id": 52,
         "nombre": "Papel Higienico Campanita 100mt",
         "img": "./img/papel-higienico-campanita.jpg",
         "categoria": {
@@ -530,7 +520,7 @@
         "precio": 1588
     },
     {
-        "id": 54,
+        "id": 53,
         "nombre": "Papel Higienico Elite 80mt",
         "img": "./img/papel-higienico-elite.jpg",
         "categoria": {
@@ -540,7 +530,7 @@
         "precio": 792.22
     },
     {
-        "id": 55,
+        "id": 54,
         "nombre": "Papel Higienico Higienol 30mt",
         "img": "./img/papel-higienico-higienol.jpg",
         "categoria": {
@@ -550,7 +540,7 @@
         "precio": 828
     },
     {
-        "id": 56,
+        "id": 55,
         "nombre": "Plumero",
         "img": "./img/plumero.jpg",
         "categoria": {
@@ -560,7 +550,7 @@
         "precio": 6042
     },
     {
-        "id": 57,
+        "id": 56,
         "nombre": "Raid Mata Cucarachas",
         "img": "./img/raid-cucarachas.jpg",
         "categoria": {
@@ -570,7 +560,7 @@
         "precio": 908.48
     },
     {
-        "id": 58,
+        "id": 57,
         "nombre": "Raid Mata Hormigas",
         "img": "./img/raid-hormigas.jpg",
         "categoria": {
@@ -580,7 +570,7 @@
         "precio": 536.75
     },
     {
-        "id": 59,
+        "id": 58,
         "nombre": "Raid Mata Moscas",
         "img": "./img/raid-moscas.jpg",
         "categoria": {
@@ -590,7 +580,7 @@
         "precio": 514.69
     },
     {
-        "id": 60,
+        "id": 59,
         "nombre": "Raid Mata Pulgas",
         "img": "./img/raid-pulgas.jpg",
         "categoria": {
@@ -600,7 +590,7 @@
         "precio": 1179.66
     },
     {
-        "id": 61,
+        "id": 60,
         "nombre": "Rejilla",
         "img": "./img/rejilla.jpg",
         "categoria": {
@@ -610,7 +600,7 @@
         "precio": 222.71
     },
     {
-        "id": 62,
+        "id": 61,
         "nombre": "Rejilla Auto",
         "img": "./img/rejilla-auto.jpg",
         "categoria": {
@@ -620,7 +610,7 @@
         "precio": 331.97
     },
     {
-        "id": 63,
+        "id": 62,
         "nombre": "Rollo de cocina Campanita",
         "img": "./img/rollo-cocina-campanita.jpg",
         "categoria": {
@@ -630,7 +620,7 @@
         "precio": 519.41
     },
     {
-        "id": 64,
+        "id": 63,
         "nombre": "Rollo de cocina Sussex",
         "img": "./img/rollo-cocina-sussex.jpg",
         "categoria": {
@@ -640,7 +630,7 @@
         "precio": 429.49
     },
     {
-        "id": 65,
+        "id": 64,
         "nombre": "Secador La Gauchita",
         "img": "./img/secador.jpg",
         "categoria": {
@@ -650,7 +640,7 @@
         "precio": 1105.03
     },
     {
-        "id": 66,
+        "id": 65,
         "nombre": "Secador Azul",
         "img": "./img/secador-azul.jpg",
         "categoria": {
@@ -660,7 +650,7 @@
         "precio": 1028.94
     },
     {
-        "id": 67,
+        "id": 66,
         "nombre": "Secador Negro",
         "img": "./img/secador-negro.jpg",
         "categoria": {
@@ -670,7 +660,7 @@
         "precio": 1002.34
     },
     {
-        "id": 68,
+        "id": 67,
         "nombre": "Suavizante Downy",
         "img": "./img/suavizante-downy.jpg",
         "categoria": {
@@ -680,7 +670,7 @@
         "precio": 1954.29
     },
     {
-        "id": 69,
+        "id": 68,
         "nombre": "Suavizante Vivere",
         "img": "./img/suavizante-vivere.jpg",
         "categoria": {
@@ -690,7 +680,7 @@
         "precio": 1203.65
     },
     {
-        "id": 70,
+        "id": 69,
         "nombre": "Suavizante Zorro",
         "img": "./img/suavizante-zorro.jpg",
         "categoria": {
@@ -700,7 +690,7 @@
         "precio": 1214.28
     },
     {
-        "id": 71,
+        "id": 70,
         "nombre": "Trapo de piso Capullo",
         "img": "./img/trapo-capullo.jpg",
         "categoria": {
@@ -710,7 +700,7 @@
         "precio": 779.22
     },
     {
-        "id": 72,
+        "id": 71,
         "nombre": "Trapo de piso Gris",
         "img": "./img/trapo-gris.jpg",
         "categoria": {
@@ -720,7 +710,7 @@
         "precio": 521.84
     },
     {
-        "id": 73,
+        "id": 72,
         "nombre": "Woolite Bebe",
         "img": "./img/woolite-bebe.jpg",
         "categoria": {

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   overflow-x: hidden;
@@ -89,39 +95,44 @@ body {
 
 .boton-menu {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #f2f2f2;
+  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #333;
+  border-radius: 10px;
+  font-size: 13px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .boton-menu.active {
-  background-color: #e0e0e0;
+  background-color: #8fd0d8;
 }
+
 
 .boton-menu:hover {
   background-color: #d9d9d9;
 }
 
-#verCarrito {
+.botonCarrito {
   padding: 10px 20px;
-  background-color: #f2f2f2;
+  background-color: #8fd0d8;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-#verCarrito i {
+.botonCarrito i {
   margin-right: 5px;
   font-size: 30px;
+  font-weight: bold;
 }
 
-#resultado {
+
+.resultado-container {
   margin-top: 20px;
 }
 
@@ -141,6 +152,14 @@ body {
 }
 
 /*BUSCADOR */
+.buscador {
+  width: 600px; 
+  max-width: 100%; 
+  margin: 0 auto; 
+  text-align: center;
+}
+
+
 .resultado-container {
   display: flex;
   flex-wrap: wrap;
@@ -162,6 +181,12 @@ body {
   margin-top: 50px;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
 .footer h3 {
   color: #333;
   font-size: 20px;
@@ -169,7 +194,7 @@ body {
 }
 
 .footer p {
-  color: blue;
+  color: black;
   font-size: 16px;
   margin-bottom: 5px;
 }
@@ -180,6 +205,12 @@ body {
   color: #777;
   font-size: 20px;
   transition: color 0.3s
+}
+
+.legales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* MODAL */
