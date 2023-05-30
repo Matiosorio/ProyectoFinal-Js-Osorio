@@ -214,28 +214,6 @@ body {
 }
 
 /* MODAL */
-/* .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0; 
-    width: 400px; 
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    overflow-y: auto; 
-  }
-  
-  .modal-content {
-    position: relative;
-    width: 100%;
-    max-width: 100%; 
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  } */
 
 
   .modal {
@@ -243,34 +221,32 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 500px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
     overflow-y: auto;
   }
   
   .modal-content {
     position: relative;
     width: 100%;
-    max-width: 100%;
-    margin: 100px auto;
+    height: 100vh;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     flex-direction: column;
+    overflow-y: auto; 
   }
+
   
   
   .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    align-self: flex-end;
     font-size: 24px;
     font-weight: bold;
     color: #999;
     cursor: pointer;
+    z-index: 9999;
   }
   
   .row {
@@ -342,16 +318,27 @@ body {
     margin-bottom: 10px;
   }
   
-  .vaciar-carrito {
-    background-color: #dc3545;
-    color: #fff;
+  .botonModal {
+    background-color: #8fd0d8;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
     border: none;
-    padding: 10px 20px;
+    padding: 6px 13px;
     cursor: pointer;
+    max-width: 150px; /* Establecer una anchura máxima */
+    box-sizing: border-box;
   }
   
-  .vaciar-carrito:hover {
+  .botonModal:hover {
     background-color: #c82333;
+  }
+
+  .botonesContainer {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: flex-start; /* Alinear los botones a la izquierda */
+    margin-top: 10px; /* Espacio superior entre el contenedor y los botones */
   }
   
   .carrito-vacio {
