@@ -142,7 +142,6 @@ body {
   margin-top: 50px; 
   margin-left: 20px; 
   margin-right: 20px; 
-  /* background-color: #f2f2f2; */
 }
 
 
@@ -175,7 +174,6 @@ body {
 /* FOOTER */
 
 .footer {
-  /* background-color: #f8f8f8; */
   background-color: #8fd0d8;
   padding: 20px;
   margin-top: 50px;
@@ -220,11 +218,17 @@ body {
     display: none;
     position: fixed;
     top: 0;
+    left: auto;
     right: 0;
     width: 500px;
     height: 100vh;
     overflow-y: auto;
+    transition: 0.5s;
   }
+
+  .active .modal{
+    left: calc(100% - 500px);
+}
   
   .modal-content {
     position: relative;
@@ -263,7 +267,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Agrega espacio entre los elementos */
+    justify-content: space-between;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -326,7 +330,7 @@ body {
     border: none;
     padding: 6px 13px;
     cursor: pointer;
-    max-width: 150px; /* Establecer una anchura máxima */
+    max-width: 150px;
     box-sizing: border-box;
   }
   
@@ -336,9 +340,9 @@ body {
 
   .botonesContainer {
     display: flex;
-    gap: 10px; /* Espacio entre los botones */
-    justify-content: flex-start; /* Alinear los botones a la izquierda */
-    margin-top: 10px; /* Espacio superior entre el contenedor y los botones */
+    gap: 10px; 
+    justify-content: flex-start; 
+    margin-top: 10px; 
   }
   
   .carrito-vacio {
