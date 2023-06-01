@@ -158,12 +158,18 @@ const mostrarCarrito = () => {
             restarButton.classList.add("btn", "colorBoton", "producto-btn-restar");
             restarButton.addEventListener("click", () => restarDelCarrito(producto.id));
 
+            const sumarButton = document.createElement("button");
+            sumarButton.textContent = "+";
+            sumarButton.classList.add("btn", "colorBoton", "producto-btn-sumar");
+            sumarButton.addEventListener("click", () => sumarAlCarrito(producto.id));
+
             productoElement.appendChild(imagenElement);
             productoElement.appendChild(nombreElement);
             productoElement.appendChild(precioElement);
             productoElement.appendChild(cantidadElement);
             productoElement.appendChild(eliminarButton);
             productoElement.appendChild(restarButton);
+            productoElement.appendChild(sumarButton);
 
             contenedorProductosModal.appendChild(productoElement);
         });
@@ -209,6 +215,20 @@ const restarDelCarrito = (id) => {
         } else {
             carrito.splice(productoAgregadoIndex, 1);
         }
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+    calcularTotal();
+    actualizarContadorCarrito();
+};
+
+// Función para sumar productos al carrito
+const sumarAlCarrito = (id) => {
+    const productoAgregado = carrito.find((producto) => producto.id === id);
+
+    if (productoAgregado) {
+        productoAgregado.cantidad++;
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));

@@ -301,7 +301,8 @@ body {
   }
   
   .producto-btn-eliminar,
-  .producto-btn-restar {
+  .producto-btn-restar,
+  .producto-btn-sumar {
     background-color: #dc3545;
     color: #fff;
     border: none;
@@ -311,7 +312,8 @@ body {
   }
   
   .producto-btn-eliminar:hover,
-  .producto-btn-restar:hover {
+  .producto-btn-restar:hover
+  .producto-btn-sumar:hover {
     background-color: #c82333;
   }
   
@@ -341,7 +343,7 @@ body {
   .botonesContainer {
     display: flex;
     gap: 10px; 
-    justify-content: flex-start; 
+    justify-content: center; 
     margin-top: 10px; 
   }
   
@@ -350,6 +352,11 @@ body {
     font-size: 20px;
     padding: 20px;
     color: gray;
+  }
+  .modal-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
   }
 
   /* SWEET ALERT */
