@@ -108,12 +108,6 @@ const cerrarModal = () => {
 // Evento click en el botón "Cerrar"
 closeModalBtn.addEventListener('click', cerrarModal);
 
-// Evento click fuera del modal para cerrarlo
-window.addEventListener('click', (event) => {
-    if (event.target === carritoModal) {
-        cerrarModal();
-    }
-});
 
 // Mostrar el carrito de compras
 const mostrarCarrito = () => {
