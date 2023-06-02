@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="estilos.css">
   <!-- TOASTIFY -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  <!-- FONTAWESOME -->
   <!-- LINK FONTAWESOME -->
   <script src="https://kit.fontawesome.com/f8cc6a495e.js" crossorigin="anonymous"></script>
 
@@ -22,7 +21,7 @@
 <body>
 
 
-  <!-- <header> -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html"><img class="fluid logo" src="./img/logo-distrimax.png"
@@ -70,19 +69,23 @@
           </li>
         </ul>
       </div>
-      <button id="verCarrito" class="botonCarrito">
-        <i class="fa-solid fa-cart-shopping"></i> Carrito
+      <div class="carritoContainer">
+        <button id="verCarrito" class="botonCarrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
         <span id="contadorCarrito" class="contador-carrito">0</span>
-      </button>
+      </div>
     </div>
   </nav>
-  <input type="text" id="buscador" class="form-control my-2 buscador" placeholder="¿Qué querés comprar hoy?">
-  <div id="resultado" class="resultado-container"></div>
-  <!-- </header> -->
+
+  <div>
+    <input type="text" id="buscador" class="form-control my-2 buscador" placeholder="¿Qué querés comprar hoy?">
+    <div id="resultado" class="resultado-container"></div>
+  </div>
 
 
 
-  <!-- SHOP -->
+  <!-- CONTENEDOR PRINCIPAL -->
   <div id="contenedorProductos" class="row productos-container"></div>
 
 
@@ -107,24 +110,24 @@
       </div>
       <div class="legales">
         <p>© 2023 | Todos los derechos reservados.</p>
-    </div>
+      </div>
     </div>
   </footer>
 
- <!-- MODAL -->
-<div id="carritoModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <h2>Carrito</h2>
-    <div id="contenedorProductosModal" class="row productos-container-carrito"></div>
-    <p id="carritoVacio" class="carrito-vacio">Tu carrito está vacío.</p>
-    <div id="totalCarrito" class="total"></div>
-    <div class="botonesContainer">
-      <button id="vaciarCarrito" class="btn botonModal">Vaciar Carrito</button>
-      <button id="finalizarCompra" class="btn botonModal">Finalizar Compra</button>
+  <!-- MODAL -->
+  <div id="carritoModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Carrito</h2>
+      <div id="contenedorProductosModal" class="row productos-container-carrito"></div>
+      <p id="carritoVacio" class="carrito-vacio">Tu carrito está vacío.</p>
+      <div id="totalCarrito" class="total"></div>
+      <div class="botonesContainer">
+        <button id="vaciarCarrito" class="btn botonModal">Vaciar Carrito</button>
+        <button id="finalizarCompra" class="btn botonModal">Finalizar Compra</button>
+      </div>
     </div>
   </div>
-</div>
 
 
 

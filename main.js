@@ -68,7 +68,7 @@ const agregarAlCarrito = (id) => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarContadorCarrito();
     calcularTotal();
-    
+
     const carritoModalAbierto = carritoModal.style.display === 'block';
     if (carritoModalAbierto) {
         mostrarCarrito();
@@ -180,8 +180,6 @@ const mostrarCarrito = () => {
     botonFinalizarCompra.style.display = carrito.length === 0 ? "none" : "block";
 
 };
-
-
 
 // Eliminar productos del carrito
 const eliminarDelCarrito = (id) => {
@@ -304,7 +302,7 @@ const actualizarContadorCarrito = () => {
         }
     }
 
-    // Se oculta o muestra el botón según el estado del carrito
+    // Se oculta o muestra el botón vaciarCarrito dependiendo de si hay productos o no
     botonVaciarCarrito.style.display = carrito.length === 0 ? "none" : "block";
 };
 
@@ -322,14 +320,13 @@ const calcularTotal = () => {
 };
 
 
-
 //Buscador de articulos
 const filtrar = () => {
     resultado.innerHTML = '';
 
     const texto = buscador.value.toLowerCase();
     if (texto === '') {
-        // No se ha ingresado ningún texto en el buscador, no se muestra ningún producto
+        // Si no se ingresa nada en el buscador, no se muestra ningún producto
         return;
     }
 
@@ -403,20 +400,22 @@ botonLavado.addEventListener("click", () => {
     filtrarPorCategoria("lavado");
 });
 
+
+//Función para filtrar por categoría
 const filtrarPorCategoria = (categoria) => {
-    // Limpiamos el contenedor de productos antes de mostrar los nuevos productos
+    // Limpio el contenedor de productos antes de mostrar los nuevos productos
     contenedorProductos.innerHTML = "";
 
-    // Filtramos los productos por la categoría seleccionada
+    // Se filtran los productos por la categoría seleccionada
     const productosFiltrados = productos.filter(producto => producto.categoria.id === categoria);
 
-    // Mostramos los productos filtrados en el contenedor de productos
+    // Mostrar los productos filtrados en el contenedor de productos
     mostrarProductos(productosFiltrados);
 };
 
 // Función para mostrar todos los productos
 const mostrarTodosLosProductos = () => {
-    contenedorProductos.innerHTML = ""; // Limpiar el contenedor de productos
+    contenedorProductos.innerHTML = ""; // Limpia el contenedor de productos
 
     // Mostrar todos los productos en el contenedor
     mostrarProductos(productos);
@@ -431,18 +430,18 @@ botonTodos.addEventListener("click", () => {
 //FINALIZAR COMPRA
 const finalizarCompra = async () => {
     await Swal.fire({
-        title: '¡Compra finalizada!',
-        text: 'Gracias por tu compra. Recibirás una confirmación por correo electrónico.',
+        title: '¡Operación finalizada con éxito!',
+        text: '¡Gracias por tu compra!',
         icon: 'success',
         confirmButtonText: 'Aceptar'
     });
 
-    // Luego, puedes vaciar el carrito
+    // Se vacia el carrito
     carrito = [];
-        localStorage.removeItem("carrito");
-        mostrarCarrito();
-        actualizarContadorCarrito();
-        calcularTotal();
+    localStorage.removeItem("carrito");
+    mostrarCarrito();
+    actualizarContadorCarrito();
+    calcularTotal();
 };
 
 // Llamada a la función finalizarCompra cuando se hace clic en el botón "Finalizar compra"
